@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using TutorMate.Models;
 using TutorMate.Repositories;
 using TutorMate.Views;
@@ -123,6 +123,37 @@ namespace TutorMate
             LoginWindow login = new LoginWindow();
             login.Show();
             this.Close();
+        }
+
+        public void ShowPanelDaftarTutor()
+        {
+            SembunyikanSemuaPanel();
+            PanelDaftarTutor.Visibility = Visibility.Visible;
+            TxtJudulHalaman.Text = "List Tutor";
+            LoadData();
+        }
+
+        public void ShowPanelKatalogMK()
+        {
+            SembunyikanSemuaPanel();
+            PanelKatalogMK.Visibility = Visibility.Visible;
+            TxtJudulHalaman.Text = "Katalog Mata Kuliah";
+            LoadData();
+        }
+
+        public void ShowPanelFormDaftarTutor()
+        {
+            SembunyikanSemuaPanel();
+            PanelFormDaftarTutor.Visibility = Visibility.Visible;
+            TxtJudulHalaman.Text = "Form Pendaftaran Tutor";
+            LoadData();
+        }
+
+        public void ShowPanelFormTambahMK()
+        {
+            SembunyikanSemuaPanel();
+            PanelFormTambahMK.Visibility = Visibility.Visible;
+            TxtJudulHalaman.Text = "Tambah Mata Kuliah Baru";
         }
     }
 }
